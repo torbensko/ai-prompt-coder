@@ -32,5 +32,9 @@ To generate a file:
   Create a component named Timer that displays the ellapsed time since started.
   ```
 
-- Run using `npx run ai-prompt-coder`. This will produce a `Timer.tsx` file.
+- Run using `npx ai-prompt-coder`. This will produce a `Timer.tsx` file.
 - If you are unhappy with the file, delete and run again.
+- You can embed other files using the markup `[[./relative-path/filename]]`. For example:
+  ```txt
+  Create a component that displays an Image [[../types/Image.ts]].
+  ```
