@@ -1,0 +1,22 @@
+Write a function called extractFilePathAndInsertFileContents that scans a block of text, extracts any pathnames between double square brackets, finds the referrenced file using the pathname and inserts the file at the bottom of the text. It should replace the square brackets with the text "(contents below)"
+
+For example:
+```txt
+Aliqua aliquip quis [[./_test/bar.txt]] cillum reprehenderit fugiat. 
+In deserunt fugiat mollit ipsum ipsum occaecat proident [[./_test/foo.txt]] aute consequat.
+```
+
+Becomes:
+```txt
+Aliqua aliquip quis (contents below) cillum reprehenderit fugiat. 
+In deserunt fugiat mollit ipsum ipsum occaecat proident (contents below) aute consequat.
+
+Contents of ./_test/bar.txt:
+CONTENTS OF FILE
+
+Contents of ./_test/foo.txt:
+CONTENTS OF FILE
+```
+
+Accept a rootPath and calculate the pathname relative to this.
+Throw an error if a referenced file is not found.

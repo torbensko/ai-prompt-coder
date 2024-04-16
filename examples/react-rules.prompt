@@ -1,0 +1,59 @@
+
+-- src/**/*.prompt
+
+This project uses: TypeScript, React, MUI, lodash, styled-components.
+
+-- **/components/**/*.tsx.prompt ["**/*.stories.tsx.prompt"]
+
+Follow the approach shown in this example:
+
+```tsx
+export interface IMyComponentProps {...}
+export const MyComponent: React.FC<IMyComponentProps> = ({ ... }) => { ... }
+```
+
+No default export.
+Include a class comment explaining the purpose of the component.
+Use existing MUI components if necessary.
+
+-- **/components/**/*.stories.tsx.prompt
+
+Storybook example demonstrating all props.
+Follow the approach shown in this example:
+
+```ts
+import React from "react";
+import type { Meta, StoryFn } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { MyComponent, IMyComponentProps } from "./MyComponent";
+
+const meta: Meta = {
+  title: "Example/MyComponent",
+  component: MyComponent,
+  parameters: {
+    layout: "centered"
+  },
+  argTypes: {
+    onClick: { action: "clicked" }
+  }
+};
+
+export default meta;
+
+const Template: StoryFn<IMyComponentProps> = (args) => <MyComponent {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  onClick: action("digit-click")
+};
+```
+
+-- **/helpers/*.ts.prompt
+
+Do not include any examples or tests in the code.
+Ensure the function is exported.
+Add a comment describing the purpose of the function.
+
+-- **/helpers/**/*.spec.ts.prompt
+
+Use Jest for testing.

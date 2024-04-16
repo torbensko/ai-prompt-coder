@@ -1,0 +1,15 @@
+Write a function, extractCodeFromGptResponse, that extracts any codeblocks in the specified text.
+The block will always start and end with ```. 
+The opening tag may include the type, e.g. ```tsx, ```ts, ```js, etc
+
+Input:
+Proident quis irure laboris et.
+```tsx
+const myVar = 10;
+```
+Proident nostrud exercitation officia amet dolore sit proident.
+
+Output:
+const myVar = 10;
+
+

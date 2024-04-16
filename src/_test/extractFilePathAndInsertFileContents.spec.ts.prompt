@@ -1,0 +1,2 @@
+Test extractFilePathAndInsertFileContents [[../extractFilePathAndInsertFileContents.ts]] function. 
+Use the contents of foo.txt [[./foo.txt]] and bar.txt [[./bar.txt]].
