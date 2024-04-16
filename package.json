@@ -1,5 +1,5 @@
 {
-  "name": "prompt-coder",
+  "name": "ai-prompt-coder",
   "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -7,7 +7,7 @@
     "build": "tsc"
   },
   "bin": {
-    "prompt-coder": "./dist/index.js"
+    "ai-prompt-coder": "./dist/index.js"
   },
   "dependencies": {
     "glob": "^10.3.10",

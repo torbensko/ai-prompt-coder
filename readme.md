@@ -1,6 +1,6 @@
 # Introduction
 
-`prompt-coder` uses ChatGPT to write code based on `.prompt` files. It will
+`ai-prompt-coder` uses ChatGPT to write code based on `.prompt` files. It will
 build a prompt based on a set of rules applied to your directory structure.
 All rules are defined in `rules.prompt`. Please see `/examples` for existing
 rules you can utilise.
@@ -9,7 +9,7 @@ rules you can utilise.
 
 ## Setting up
 
-- Install with `yarn add prompt-coder`
+- Install with `yarn add ai-prompt-coder`
 - Create a `rules.prompt` in your root directory. A basic file may include:
   ```txt
   -- src/**/*.prompt
@@ -32,5 +32,5 @@ To generate a file:
   Create a component named Timer that displays the ellapsed time since started.
   ```
 
-- Run using `npx run prompt-coder`. This will produce a `Timer.tsx` file.
+- Run using `npx run ai-prompt-coder`. This will produce a `Timer.tsx` file.
 - If you are unhappy with the file, delete and run again.
