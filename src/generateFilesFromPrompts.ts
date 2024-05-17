@@ -26,7 +26,7 @@ export const generateFilesFromPrompts = async (
       // occur when test prompts are written alongside the file to be tested
       const promptWithFiles = await extractFilePathAndInsertFileContents(
         fullPrompt,
-        filePath
+        targetPath
       );
       // write out the prompt to help with debugging
       debugSaveFullPrompt &&
@@ -42,6 +42,6 @@ export const generateFilesFromPrompts = async (
   }
   return {
     generated: processedFiles,
-    failed: failedFiles
+    failed: failedFiles,
   };
 };

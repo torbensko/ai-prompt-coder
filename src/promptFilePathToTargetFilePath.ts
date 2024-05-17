@@ -1,3 +1,4 @@
 export function promptFilePathToTargetFilePath(filePath: string) {
-  return filePath.replace(".prompt", "");
+  const target = filePath.replace(".prompt", "").replace("/_prompts/", "/");
+  return target;
 }

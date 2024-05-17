@@ -9,10 +9,10 @@ import { iterativelyGenerateFilesFromPrompts } from "./iterativelyGenerateFilesF
   const filePrompts = await buildPromptsFromRules(rules);
   // removes the prompts that have already been processed
   const incompleteFilePrompts = removeGeneratedFilePrompts(filePrompts);
+
   const failedFiles = await iterativelyGenerateFilesFromPrompts(
     incompleteFilePrompts
   );
-
   failedFiles.forEach((path) => {
     console.warn(`Unable to generate ${path}`);
   });

@@ -22,7 +22,7 @@ const generateFilesFromPrompts = async (filePrompts) => {
         try {
             // this will fail when it refers to files that have not yet been generated, which may
             // occur when test prompts are written alongside the file to be tested
-            const promptWithFiles = await (0, extractFilePathAndInsertFileContents_1.extractFilePathAndInsertFileContents)(fullPrompt, filePath);
+            const promptWithFiles = await (0, extractFilePathAndInsertFileContents_1.extractFilePathAndInsertFileContents)(fullPrompt, targetPath);
             // write out the prompt to help with debugging
             settings_1.debugSaveFullPrompt &&
                 fs_1.default.writeFileSync(`${targetPath}.fullPrompt`, promptWithFiles);
@@ -38,7 +38,7 @@ const generateFilesFromPrompts = async (filePrompts) => {
     }
     return {
         generated: processedFiles,
-        failed: failedFiles
+        failed: failedFiles,
     };
 };
 exports.generateFilesFromPrompts = generateFilesFromPrompts;

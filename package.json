@@ -1,14 +1,12 @@
 {
   "name": "ai-prompt-coder",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
-  "bin": {
-    "ai-prompt-coder": "./dist/index.js"
-  },
+  "bin": "./dist/index.js",
   "dependencies": {
     "glob": "^10.3.10",
     "lodash": "^4.17.21",
@@ -17,6 +15,7 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
+    "@types/lodash": "^4.17.1",
     "ts-jest": "^29.1.2",
     "typescript": "^5.4.3"
   }
