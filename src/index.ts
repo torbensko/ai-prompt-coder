@@ -4,7 +4,7 @@ import { removeGeneratedFilePrompts } from "./removeGeneratedFilePrompts";
 import { iterativelyGenerateFilesFromPrompts } from "./iterativelyGenerateFilesFromPrompts";
 
 (async () => {
-  const rules = await readPrompts("rules.prompt");
+  const rules = await readPrompts(".promptRules");
   // builds all possible prompts
   const filePrompts = await buildPromptsFromRules(rules);
   // removes the prompts that have already been processed
